@@ -1,3 +1,4 @@
+import webbrowser
 def Starting():
      return input("Enter command: ")
 
@@ -12,6 +13,12 @@ def CommandBot(message):
                     "2. author\n"
                     "3. music\n"
                     "4. stop\n")
+
+    elif "youtube" in message:
+        say_message("Opening YouTube\n")
+        say_message("Please wait...\n")
+        webbrowser.open('https://www.youtube.com/', new=1)
+        say_message("Youtube has been successfully opened\n")
 
     elif "stop" in message:
         say_message("Goodbye, My frend")
