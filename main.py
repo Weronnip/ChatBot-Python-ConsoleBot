@@ -1,4 +1,5 @@
 import webbrowser
+import subprocess
 def Starting():
      return input("Enter command: ")
 
@@ -12,7 +13,13 @@ def CommandBot(message):
                     "1. youtube\n"
                     "2. author\n"
                     "3. music\n"
-                    "4. stop\n")
+                    "4.calc\n"
+                    "5.\n"
+                    "6.\n"
+                    "7.\n"
+                    "8.\n"
+                    "9.\n"
+                    "10. stop\n")
 
     elif "youtube" in message:
         say_message("Opening YouTube\n")
@@ -29,13 +36,20 @@ def CommandBot(message):
         webbrowser.open('https://music.yandex.ru/home?=', new=1)
         say_message("YandexMusic has been successfully opened!\n")
 
+    elif "calc" in message:
+        say_message("Opening calculator\n")
+        say_message("Please wait...\n")
+        subprocess.Popen('C:\\Windows\\System32\\calc.exe')
+        say_message("Calculator has been successfully opened!\n")
+
+
     elif "stop" in message:
         say_message("Goodbye, My frend")
         exit()
 
 
     else:
-        say_message("This command does not exist")
+        say_message("This command does not exist\n")
 
 def say_message(message):
     print(message)
