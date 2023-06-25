@@ -18,7 +18,16 @@ def CommandBot(message):
         say_message("Opening YouTube\n")
         say_message("Please wait...\n")
         webbrowser.open('https://www.youtube.com/', new=1)
-        say_message("Youtube has been successfully opened\n")
+        say_message("Youtube has been successfully opened!\n")
+
+    elif "author" in message:
+        say_message("Author Bor: @Weronnip\n")
+
+    elif "music" in message:
+        say_message("Opening YandexMusic\n")
+        say_message("Please wait...\n")
+        webbrowser.open('https://music.yandex.ru/home?=', new=1)
+        say_message("YandexMusic has been successfully opened!\n")
 
     elif "stop" in message:
         say_message("Goodbye, My frend")
