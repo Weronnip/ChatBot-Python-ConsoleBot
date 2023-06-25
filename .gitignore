@@ -1,2 +1,3 @@
+modified:   .gitignore
+
 ./TestCommand
-./TestCommand/CommandTest.py
